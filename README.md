@@ -1,8 +1,8 @@
 ### Date created
-2020-05-18
+2020-05-18 23:02
 
 ### Project Title
-Explore US Bikeshare Data
+Explore US Bikeshare Data - Nanodegree program
 
 ### Description
 In this project, I used Python to understand the U.S. bikeshare data. Statistics is calculated using the interactive python script bikeshare.py
