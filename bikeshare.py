@@ -42,13 +42,13 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
-    # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = get_user_input(
         "Please specify the city (chicago, new york city, washington)", CITY_DATA.keys())
-    # TO DO: get user input for month (all, january, february, ... , june)
+    # : get user input for month (all, january, february, ... , june)
     month = get_user_input(
         "Please specify the name of the month (janurary, feburary, ..., june , or 'all' to apply no filter", months)
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+    # : get user input for day of week (all, monday, tuesday, ... sunday)
     day = get_user_input(
         "Please specify the name of the day (monday, tuesday, ..., sunday , or 'all' to apply no filter", weekdays)
 
@@ -89,13 +89,13 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    # TO DO: display the most common month
+    # : display the most common month
     print('*' * 40)
     print("The most common month: {}".format(
         months[df['Month'].mode()[0]].title()))
-    # TO DO: display the most common day of week
+    # : display the most common day of week
     print("The most common day: {}".format(df['Day'].mode()[0]))
-    # TO DO: display the most common start hour
+    # : display the most common start hour
     print("The most common start hour: {}".format(df['Hour'].mode()[0]))
     print('*' * 40)
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -108,15 +108,15 @@ def station_stats(df):
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
     print('*' * 40)
-    # TO DO: display most commonly used start station
+    # : display most commonly used start station
     print("The most common start station: {}".format(
         df['Start Station'].mode()[0]))
 
-    # TO DO: display most commonly used end station
+    # : display most commonly used end station
     print("The most common end station: {}".format(
         df['End Station'].mode()[0]))
     df['Station Combination'] = df['Start Station'] + ' to ' + df['End Station']
-    # TO DO: display most frequent combination of start station and end station trip
+    # : display most frequent combination of start station and end station trip
     print("The most common frequent combination of start station and end station trip: {}".format(
         df['Station Combination'].mode()[0]))
     print('*' * 40)
@@ -131,9 +131,9 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    # TO DO: display total travel time
+    # : display total travel time
     print("Total travel time: {}".format(df['Trip Duration'].sum()))
-    # TO DO: display mean travel time
+    # : display mean travel time
     print("Mean travel time: {}".format(df['Trip Duration'].mean()))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -146,11 +146,11 @@ def user_stats(df):
     print('\nCalculating User Stats...\n')
     start_time = time.time()
     try:
-        # TO DO: Display counts of user types
+        # : Display counts of user types
         print("User type counts: {}".format(df['User Type'].value_counts()))
-        # TO DO: Display counts of gender
+        # : Display counts of gender
         print("Gender counts: {}".format(df['Gender'].value_counts()))
-        # TO DO: Display earliest, most recent, and most common year of birth
+        # : Display earliest, most recent, and most common year of birth
         print("Earliest birth: {}".format(df['Birth Year'].min()))
         print("Most recent birth: {}".format(df['Birth Year'].max()))
         print("Most common birth: {}".format(df['Birth Year'].mode()[0]))
